@@ -5,3 +5,11 @@ elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H', 'is_nobl
 # hint: helium is a noble gas, hydrogen isn't
 print(elements['hydrogen']['is_noble_gas'])
 print(elements['helium']['is_noble_gas'])
+
+# CORRECT ANSWER:
+
+elements = {'hydrogen': {'number': 1, 'weight': 1.00794, 'symbol': 'H'},
+            'helium': {'number': 2, 'weight': 4.002602, 'symbol': 'He'}}
+
+elements['hydrogen']['is_noble_gas'] = False
+elements['helium']['is_noble_gas'] = True
