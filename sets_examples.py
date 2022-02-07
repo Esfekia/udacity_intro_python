@@ -8,3 +8,7 @@ country_set = set(countries)
 print(country_set) = 196
 
 country_set.add('Italy')
+
+numbers = [1, 2, 6, 3, 1, 1, 6]
+unique_nums = set(numbers)
+print(unique_nums)
