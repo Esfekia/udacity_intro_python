@@ -15,6 +15,31 @@ elif points >= 181 and points <= 200:
     result = "Congratulations! You won a penguin!"
 print(result)
 
+# Truth Value Testing Version:
+points = 178  # use this as input for your submission
+
+# establish the default prize value to None
+prize = None
+
+# use the points value to assign prizes to the correct prize names
+if points <= 50:
+    prize = "wooden rabbit"
+elif points <= 150:
+    prize = None
+elif points <= 180:
+    prize = "wafer-thin mint"
+elif points <= 200:
+    prize = "penguin"
+
+# use the truth value of prize to assign result to the correct prize
+if prize:
+    result = "Congratulations! You won a {}!".format(prize)
+else:
+    result = "Oh dear, no prize this time!"
+
+print(result)
+
+
 # '''
 # You decide you want to play a game where you are hiding
 # a number from someone.  Store this number in a variable
