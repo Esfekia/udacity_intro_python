@@ -31,3 +31,25 @@ print("expected result: {}, actual result: {}".format(expected_result1, test1))
 test2 = population_density(864816, 121.4)
 expected_result2 = 7123.6902801
 print("expected result: {}, actual result: {}".format(expected_result2, test2))
+
+
+"""Quiz3:
+Quiz: readable_timedelta
+Write a function named readable_timedelta. 
+The function should take one argument, an integer days, 
+and return a string that says how many weeks and days 
+that is. """
+# write your function here
+
+
+def readable_timedelta(days):
+    if days < 7:
+        return ("0 week(s) and {} day(s).".format(days))
+    elif days == 7:
+        return ("1 week(s) and 0 day(s).")
+    else:
+        return ("{} week(s) and {} day(s).".format((days//7), (days % 7)))
+
+
+# test your function
+print(readable_timedelta(10))
