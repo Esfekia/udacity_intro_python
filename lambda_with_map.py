@@ -24,3 +24,23 @@ def mean(num_list): return sum(num_list) / len(num_list)
 
 averages = list(map(mean, numbers))
 print(averages)
+
+
+"""Quiz 2: Lambda with Filter
+The code below uses filter() to get the names in cities that are fewer than 10 characters long to create the list short_cities. 
+Give it a test run to see what happens.
+
+Rewrite this code to be more concise by replacing the is_short function with a lambda expression defined within the call to filter()."""
+
+cities = ["New York City", "Los Angeles",
+          "Chicago", "Mountain View", "Denver", "Boston"]
+
+# def is_short(name):
+#    return len(name) < 10
+
+
+def is_short(name): return len(name) < 10
+
+
+short_cities = list(filter(is_short, cities))
+print(short_cities)
