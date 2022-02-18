@@ -10,17 +10,29 @@ Sample Output:
 # Write your code here
 
 # HINT: create a dictionary from flowers.txt
-dict = {}
-f = open("flowers.txt", 'r')
-file_data = f.read()
-print(type(file_data))
 
-"""for line in file_data:
-key, value = line.split()
-dict[key] = value
-print(dict)
+
+from venv import create
+
+
+def create_flowerdict(myfile):
+    myfile = open(myfile, 'r')
+    data_dict = {}
+    for line in myfile:
+        key, value = line.strip().split(":")
+        data_dict[key.strip()] = value.strip()
+    myfile.close()
+    return data_dict
+
 
 # HINT: create a function to ask for user's first and last name
+def main():
+    flower_d = create_flowerdict("flowers.txt")
+    first_name = input("Please enter your first name:")
+    last_name = input("Please enter your last name:")
+    # print the desired output"""
+    print("Unique flower name with the first letter:" +
+          flower_d[first_name[0]])
 
 
-# print the desired output"""
+main()
